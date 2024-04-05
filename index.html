@@ -19,6 +19,15 @@
             width: 100%; /* 让图片宽度占据整个容器的宽度 */
             display: block; /* 使图片成为一个块级元素，避免与其他元素同行 */
         }
+        .video-container {
+            display: flex; /* 使用 Flexbox 布局 */
+            justify-content: space-between; /* 将视频之间的空间平均分配 */
+            margin-bottom: 20px; /* 设置视频容器之间的下边距 */
+        }
+        
+        .video-container video {
+            width: calc(33.33% - 10px); /* 每个视频占据容器宽度的三分之一，并留有一定的间距 */
+        }
     </style>
     <script>
         var task_map = {
@@ -233,29 +242,23 @@
                     <h2 class="title is-3"><span
                             class="dvima">Demo</span></h2>
                     <br>
-
-                    <div class="columns">
-                        <!-- Simple Object Manipulation -->
+                    <div class="video-container">
+                        <video control muted autoplay loop>
+                            <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video controls muted autoplay loop>
+                            <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video controls muted autoplay loop>
+                            <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- <div class="columns">
                         <div class="column has-text-left">
                             <h3 class="title is-5">Simple Object Manipulation</h3>
-                            <div class="select is-medium">
-                                <select id="simple-object-manipulation-menu-tasks"
-                                        onchange="updateDemoVideo('simple-object-manipulation')">
-                                    <option value="simple_manipulation" selected="selected">Visual Manipulation</option>
-                                    <option value="rotate">Rotate</option>
-                                    <option value="scene_understanding">Scene Understanding</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="simple-object-manipulation-menu-instances"
-                                        onchange="updateDemoVideo('simple-object-manipulation')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
                             <video id="simple-object-manipulation-single-task-video"
                                    controls
                                    muted
@@ -267,26 +270,8 @@
                             </video>
                         </div>
 
-                        <!-- Visual Goal Reaching -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Goal Reaching</h3>
-                            <div class="select is-medium">
-                                <select id="visual-goal-reaching-menu-tasks"
-                                        onchange="updateDemoVideo('visual-goal-reaching')">
-                                    <option value="rearrange" selected="selected">Rearrange</option>
-                                    <option value="rearrange_then_restore">Rearrange Then Restore</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="visual-goal-reaching-menu-instances"
-                                        onchange="updateDemoVideo('visual-goal-reaching')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
                             <video id="visual-goal-reaching-single-task-video"
                                    controls
                                    muted
@@ -298,147 +283,7 @@
                             </video>
                         </div>
 
-
-                    </div>
-
-                    <br>
-                    <div class="columns">
-                        <!-- Novel Concept Grounding -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Novel Concept Grounding</h3>
-                            <div class="select is-medium">
-                                <select id="novel-concept-grounding-menu-tasks"
-                                        onchange="updateDemoVideo('novel-concept-grounding')">
-                                    <option value="novel_adj_and_noun" selected="selected">Novel Adjective and Noun
-                                    </option>
-                                    <option value="novel_adj">Novel Adjective</option>
-                                    <option value="novel_noun">Novel Noun</option>
-                                    <option value="twist">Twist</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="novel-concept-grounding-menu-instances"
-                                        onchange="updateDemoVideo('novel-concept-grounding')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="novel-concept-grounding-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-
-                        <!-- One Shot Video Imitation -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">One-shot Video Imitation</h3>
-                            <div class="select is-medium">
-                                <select id="one-shot-video-imitation-menu-tasks"
-                                        onchange="updateDemoVideo('one-shot-video-imitation')">
-                                    <option value="follow_motion" selected="selected">Follow Motion</option>
-                                    <option value="follow_order">Follow Order</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="one-shot-video-imitation-menu-instances"
-                                        onchange="updateDemoVideo('one-shot-video-imitation')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="one-shot-video-imitation-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-
-                    <br>
-                    <div class="columns">
-                        <!-- Visual Constraint Satisfaction -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Visual Constraint Satisfaction</h3>
-                            <div class="select is-medium">
-                                <select id="visual-constraint-satisfaction-menu-tasks"
-                                        onchange="updateDemoVideo('visual-constraint-satisfaction')">
-                                    <option value="sweep_without_exceeding" selected="selected">Sweep without
-                                        Exceeding
-                                    </option>
-                                    <option value="sweep_without_touching">Sweep without Touching</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="visual-constraint-satisfaction-menu-instances"
-                                        onchange="updateDemoVideo('visual-constraint-satisfaction')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="visual-constraint-satisfaction-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   playbackRate="2.0"
-                                   width="100%">
-                                <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-
-                        <!-- Visual Reasoning -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Visual Reasoning</h3>
-                            <div class="select is-medium">
-                                <select id="visual-reasoning-menu-tasks" onchange="updateDemoVideo('visual-reasoning')">
-                                    <option value="manipulate_old_neighbor" selected="selected">Manipulate Old
-                                        Neighbor
-                                    </option>
-                                    <option value="pick_in_order_then_restore">Pick in Order Then Restore</option>
-                                    <option value="same_color">Same Texture</option>
-                                    <option value="same_profile">Same Shape</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="visual-reasoning-menu-instances"
-                                        onchange="updateDemoVideo('visual-reasoning')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="visual-reasoning-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/visual_reasoning/manipulate_old_neighbor/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -455,17 +300,17 @@
                     <h2 class="title is-3"><span
                             class="dvima">Experiments</span></h2>
                     <h3 class="title is-4"><span
-                            class="dvima">Results on VIMABench tasks and real-world tasks.</span></h3>
+                            class="dvima">Results on VIMABench tasks and real-world tasks</span></h3>
 
                     <img src="assets/images/Results.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto" width="85%"/>
+                         alt="" style="display: block; margin-left: auto; margin-right: auto" width="90%"/>
                     <br>
 
                     <h3 class="title is-4"><span
                             class="dvima">Ablation Studies </span></h3>
 
                     <img src="assets/images/Ablation.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto" width="85%"/>
+                         alt="" style="display: block; margin-left: auto; margin-right: auto" width="90%"/>
                     <br>
                 </div>
             </div>
