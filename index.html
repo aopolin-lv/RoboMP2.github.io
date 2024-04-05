@@ -19,14 +19,14 @@
             width: 100%; /* 让图片宽度占据整个容器的宽度 */
             display: block; /* 使图片成为一个块级元素，避免与其他元素同行 */
         }
-        .video-container {
+        .video-container-2 {
             display: flex; /* 使用 Flexbox 布局 */
             justify-content: space-between; /* 将视频之间的空间平均分配 */
             margin-bottom: 20px; /* 设置视频容器之间的下边距 */
         }
         
-        .video-container video {
-            width: calc(33.33% - 10px); /* 每个视频占据容器宽度的三分之一，并留有一定的间距 */
+        .video-container-2 video {
+            width: calc(50% - 10px); /* 每个视频占据容器宽度的二分之一，并留有一定的间距 */
         }
     </style>
     <script>
@@ -247,13 +247,10 @@
                     <br>
                     <div class="video-container">
                         <video control muted autoplay loop>
-                            <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4" type="video/mp4">
+                            <source src="assets/videos/demos/manipulate_old_neighbor.mp4" type="video/mp4">
                         </video>
                         <video controls muted autoplay loop>
-                            <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4" type="video/mp4">
-                        </video>
-                        <video controls muted autoplay loop>
-                            <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4" type="video/mp4">
+                            <source src="assets/videos/demos/same_texture.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
