@@ -3,8 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VIMA | General Robot Manipulation with Multimodal Prompts</title>
+    <title>RoboMP<sup>2</sup>: A Robotic Multimodal Perception-Planning Framework</title>
 
+    <style>
+        /* 使用CSS设置字体样式 */
+        .times-font {
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
     <script>
         var task_map = {
             "simple-object-manipulation": "simple_object_manipulation",
@@ -66,14 +72,14 @@
                     </h3>
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
-                <a target="_blank" href="https://aopolin-lv.github.io/">Qi&#160;Lv</a><sup>1;2</sup>,
+                <a target="_blank" href="https://aopolin-lv.github.io/">Qi&#160;Lv</a><sup>12</sup>,
                 <a target="_blank" href="https://openreview.net/profile?id=~Hao_Li59">Hao&#160;Li</a><sup>1</sup>,
                 <a target="_blank"
                    href="https://xiang-deng-dl.github.io/">Xiang&#160;Deng</a><sup>1</sup>,
                 <a target="_blank" href="https://rshaojimmy.github.io/">Rui&#160;Shao</a><sup>1</sup>,
                 <a target="_blank" href="https://scholar.google.com/citations?user=Oo7c22wAAAAJ&hl=zh-CN">Michael&#160;Y&#160;Wang</a><sup>2</sup>,
                 <a target="_blank"
-                   href="https://liqiangnie.github.io/">Liqiang&#160;Nie</a><sup>1</sup>,
+                   href="https://liqiangnie.github.io/">Liqiang&#160;Nie</a><sup>1</sup>
             </span>
                     </div>
 
@@ -110,7 +116,7 @@
                 </a>
               </span>
                             <!-- Code Link. -->
-                            <span class="link-block">
+                            <!-- <span class="link-block">
                 <a target="_blank" href="https://github.com/vimalabs/VIMA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -124,8 +130,8 @@
                       <i class="fa fa-network-wired"></i>
                   </span>
                   <span>Models</span>
-                </a>
-                <a target="_blank" href="https://github.com/vimalabs/VimaBench"
+                </a> -->
+                <!-- <a target="_blank" href="https://github.com/vimalabs/VimaBench"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-robot"></i>
@@ -138,7 +144,7 @@
                       <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
-                </a>
+                </a> -->
               </span>
                         </div>
 
@@ -149,7 +155,7 @@
     </div>
 </section>
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
     <div class="hero-body">
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
@@ -260,7 +266,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -271,20 +277,19 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p style="font-size: 125%">
-                        Prompt-based learning has emerged as a successful paradigm in natural language processing, where
-                        a single general-purpose language model can be instructed to perform any task specified by input
-                        prompts. Yet task specification in robotics comes in various forms, such as imitating one-shot
-                        demonstrations, following language instructions, and reaching visual goals. They are often
-                        considered different tasks and tackled by specialized models. We show that a wide spectrum of
-                        robot manipulation tasks can be expressed with <i>multimodal prompts</i>, interleaving textual
-                        and visual tokens. Accordingly, we develop a new simulation benchmark that consists of thousands
-                        of procedurally-generated tabletop tasks with multimodal prompts, 600K+ expert trajectories for
-                        imitation learning, and a four-level evaluation protocol for systematic generalization. We
-                        design a transformer-based robot agent, VIMA, that processes these prompts and outputs motor
-                        actions autoregressively. VIMA features a recipe that achieves strong model scalability and data
-                        efficiency. It outperforms alternative designs in the hardest zero-shot generalization setting
-                        by up to 2.9x task success rate given the same training data. With 10x less training data, VIMA
-                        still performs 2.7x better than the best competing variant.
+                        Multimodal Large Language Models (MLLMs) have shown impressive reasoning abilities and general 
+                        intelligence in various domains. It inspires researchers to train end-to-end MLLMs or utilize 
+                        large models to generate policies with human-selected prompts for embodied agents. However, 
+                        these methods exhibit limited generalization capabilities on unseen tasks or scenarios, and 
+                        overlook the multimodal environment information which is critical for robots to make decisions.
+                        In this paper, we introduce a novel <b>Robo</b>tic <b>M</b>ultimodal <b>P</b>erception-<b>>P</b> 
+                        (<b>RoboMP<sup>2</sup></b>) framework for robotic manipulation which consists of a Goal-Conditioned 
+                        Multimodal Preceptor (GCMP) and a Retrieval-Augmented Multimodal Planner (RAMP). Specially, GCMP 
+                        captures environment states by employing a tailored MLLMs for embodied agents with the abilities of 
+                        semantic reasoning and localization. RAMP utilizes coarse-to-fine retrieval method to find the <span class="times-font">k</span>
+                        most-relevant policies as in-context demonstrations to enhance the planner. Extensive experiments 
+                        demonstrate the superiority of RoboMP<sup>2</sup>on both VIMA benchmark and real-world tasks, with around 
+                        10% improvement over the baselines.
                     </p>
                 </div>
             </div>
