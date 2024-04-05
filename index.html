@@ -11,13 +11,14 @@
             font-family: "Times New Roman", Times, serif;
         }
         .image-container {
+            width: 600px; /* 设置图片容器的宽度 */
+            margin: 20px auto; /* 居中显示图片容器 */
             display: flex;
             justify-content: space-between; /* 将图片间距平均分配 */
-            margin: 20px; /* 设置图片容器的边距 */
         }
         
         .image-container img {
-            width: 48%; /* 图片宽度占父容器的百分比，留下一些间距 */
+            max-width: 48%; /* 图片最大宽度占父容器的百分比，留下一些间距 */
         }
     </style>
     <script>
@@ -167,115 +168,15 @@
 <section class="hero is-light is-small">
     <div class="hero-body">
         <div class="image-container">
-            <img src="assets/images/intro_1.png">
-            <figcaption>The detection results of the yellow block with the complex spatial reference using different methods</figcaption>
-            <img src="assets/images/intro_2.png">
-            <figcaption>Different plans for different environment, even if the same instruction.</figcaption>
+            <figure>
+                <img src="assets/images/intro_1.png">
+                <figcaption>The detection results of the yellow block with the complex spatial reference using different methods</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/intro_2.png">
+                <figcaption>Different plans for different environment, even if the same instruction.</figcaption>
+            </figure>
         </div>
-        <!-- <div class="container"> -->
-            <!-- <div class="item item-sweep_without_exceeding">
-                <img src="assets/images/intro_1.png" class="interpolation-image"
-                alt="" style="display: block; margin-left: auto; margin-right: auto"/> -->
-            <!-- </div> -->
-            <!-- <div class="item item-sweep_without_touching">
-                <img src="assets/images/intro_2.png" class="interpolation-image"
-                alt="" style="display: block; margin-left: auto; margin-right: auto"/> -->
-            <!-- </div> -->
-            <!-- <div id="results-carousel" class="carousel results-carousel"> -->
-
-
-                <!-- <div class="item item-rotate">
-                    <video poster="" id="rotate" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-scene_understanding">
-                    <video poster="" id="scene_understanding" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/twist/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-simple_manipulation">
-                    <video poster="" id="simple_manipulation" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/manipulate_old_neighbor/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-novel_adj">
-                    <video poster="" id="novel_adj" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/one_shot_video_imitation/follow_order/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-novel_adj_and_noun">
-                    <video poster="" id="novel_adj_and_noun" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/simple_object_manipulation/scene_understanding/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-novel_noun">
-                    <video poster="" id="novel_noun" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_touching/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-twist">
-                    <video poster="" id="twist" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/novel_adj/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-follow_motion">
-                    <video poster="" id="follow_motion" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-follow_order">
-                    <video poster="" id="follow_order" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_goal_reaching/rearrange/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-rearrange">
-                    <video poster="" id="rearrange" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/simple_object_manipulation/rotate/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-manipulate_old_neighbor">
-                    <video poster="" id="manipulate_old_neighbor" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/same_color/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-pick_in_order_then_restore">
-                    <video poster="" id="pick_in_order_then_restore" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/pick_in_order_then_restore/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-same_color">
-                    <video poster="" id="same_color" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/novel_noun/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-rearrange_then_restore">
-                    <video poster="" id="rearrange_then_restore" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/same_profile/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-same_profile">
-                    <video poster="" id="same_profile" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
     </div>
 </section>
 
