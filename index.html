@@ -11,14 +11,13 @@
             font-family: "Times New Roman", Times, serif;
         }
         .image-container {
-            width: 1000px; /* 设置图片容器的宽度 */
-            margin: 20px auto; /* 居中显示图片容器 */
-            display: flex;
-            justify-content: space-between; /* 将图片间距平均分配 */
+            width: 75%; /* 设置容器宽度为图片宽度的75% */
+            margin: 0 auto; /* 设置左右边距为 auto，实现居中对齐 */
         }
-        
+
         .image-container img {
-            max-width: 48%; /* 图片最大宽度占父容器的百分比，留下一些间距 */
+            width: 100%; /* 让图片宽度占据整个容器的宽度 */
+            display: block; /* 使图片成为一个块级元素，避免与其他元素同行 */
         }
     </style>
     <script>
@@ -170,11 +169,7 @@
         <div class="image-container">
             <figure>
                 <img src="assets/images/intro_1.png">
-                <figcaption>The detection results of the yellow block with the complex spatial reference using different methods</figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/intro_2.png">
-                <figcaption>Different plans for different environment, even if the same instruction.</figcaption>
+                <figcaption>(a) Different plans for different environment, even if the same instruction. (b) The detection results of the yellow block with the complex spatial reference using different methods</figcaption>
             </figure>
         </div>
     <!-- </div> -->
