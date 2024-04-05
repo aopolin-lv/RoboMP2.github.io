@@ -11,8 +11,8 @@
             font-family: "Times New Roman", Times, serif;
         }
         .image-container {
-            width: 80%; /* 设置容器宽度为图片宽度的75% */
-            margin: 10px 0 auto; /* 设置左右边距为 auto，实现居中对齐 */
+            width: 65%; /* 设置容器宽度为图片宽度的75% */
+            margin: 10px auto; /* 设置左右边距为 auto，实现居中对齐 */
         }
 
         .image-container img {
@@ -478,37 +478,18 @@
                 <div class="row is-full-width">
                     <h2 class="title is-3"><span
                             class="dvima">Experiments</span></h2>
-
-                    <p style="font-size: 125%">
-                        We answer three main questions during experiments:
-                    <ul style="font-size: 125%; padding-left: 5%">
-                        <li>
-                            1. What is the best recipe for building multi-task transformer-based robot agents with
-                            multimodal prompts?
-                        </li>
-                        <li>
-                            2. What are the <span style="font-weight: bold">scaling properties</span> of our approach in
-                            model capacity and data size?
-                        </li>
-                        <li>
-                            3. How do different components, such as visual tokenizers, prompt conditioning, and prompt
-                            encoding, affect robot performance?
-                        </li>
-
-                    </ul>
-                    </p>
                     <br>
                     <br>
 
                     <h3 class="title is-4"><span
-                            class="dvima">Evaluation Results</span></h3>
+                            class="dvima">Results on VIMABench tasks and real-world tasks.</span></h3>
 
-                    <img src="assets/images/scalability.png" class="interpolation-image"
+                    <img src="assets/images/Results.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
                     <br>
-                    <span style="font-size: 110%">
+                    <!-- <span style="font-size: 110%">
                         <span style="font-weight: bold">Scaling model and data.</span> <i>Top</i>: We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model sizes and generalization levels, VIMA outperforms baseline variants. <i>Bottom</i>: For a fixed model size of 92M parameters we compare the effect of imitation learning dataset size with 0.1%, 1%, 10%, and full data. VIMA is extremely sample efficient and can achieve performance comparable to other methods with 10x less data.
-                    </span>
+                    </span> -->
                     <br>
                     <br>
                     <br>
@@ -518,23 +499,11 @@
 
                     <br>
 
-                    <img src="assets/images/ablation_input_process.png" class="interpolation-image"
+                    <img src="assets/images/Ablation.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
                     <br>
                     <span style="font-size: 110%">
-                        <span style="font-weight: bold">Ablation on visual tokenizers.</span> We compare the performance of VIMA-200M model across different visual tokenizers. Our proposed object tokens outperform all methods that learn directly from raw pixels, and <i>Object Perceiver</i> that downsamples the object sequence to a fixed number of tokens.
-                    </span>
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <img src="assets/images/global_seq_mod.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <br>
-                    <span style="font-size: 110%">
-                        <span style="font-weight: bold">Ablation on prompt conditioning.</span> We compare our method (<i>xattn</i>: cross-attention prompt conditioning) with a vanilla transformer decoder (<i>gpt-decoder</i>) across different model sizes. Cross-attention is especially helpful in low-parameter regime and for harder generalization tasks.
+                        <span style="font-weight: bold">Ablation on (a) retrieval modules, (b) planners with different modalities.
                     </span>
                 </div>
             </div>
@@ -553,14 +522,12 @@
                             class="dvima">Conclusion</span></h2>
 
                     <p style="font-size: 125%">
-                        In this work, we introduce a novel <i>multimodal</i> prompting formulation that converts diverse
-                        robot manipulation tasks into a uniform sequence modeling problem. We instantiate this
-                        formulation in VIMA-Bench, a diverse benchmark with multimodal tasks and systematic evaluation
-                        protocols for generalization. We propose VIMA, a conceptually simple transformer-based agent
-                        capable of solving tasks such as visual goal reaching, one-shot video imitation, and novel
-                        concept grounding with a single model. Through comprehensive experiments, we show that VIMA
-                        exhibits strong model scalability and zero-shot generalization. Therefore, we recommend our
-                        agent design as a solid starting point for future work.
+                        In this paper, we have proposed a novel Robotic Perception and Planning framework (RoboMP2) that consists of the
+                        Goal-Conditioned Multimodal Perceptor (GCMP) and the Retrieval-Augmented Multimodal Planner (RAMP). GCMP
+                        is introduced to capture multimodal environment information by incorporating a tailored MLLM. RAMP employs a
+                        coarse-to-fine retrieval-augmented approach to adapatively
+                        select the <i><span class="times-font">k</span></i> most-relevant policies as in-context demonstrations to enhance the generalization. Extensive experiments
+                        demonstrate that RoboMP<sup>2</sup> outperforms the baselines by a large margin on both VIMABench and real-world tasks.
                     </p>
 
                 </div>
@@ -591,7 +558,7 @@
                     <p>
                         Website template borrowed from <a
                             href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
-                            href="https://github.com/cliport/cliport.github.io">CLIPort</a>.
+                            href="https://github.com/vimalabs/vimalabs.github.io">VIMA</a>.
                     </p>
                 </div>
             </div>
