@@ -11,7 +11,7 @@
             font-family: "Times New Roman", Times, serif;
         }
         .image-container {
-            width: 65%; /* 设置容器宽度为图片宽度的75% */
+            width: 65%; /* 设置容器宽度为图片宽度的65% */
             margin: 10px auto; /* 设置左右边距为 auto，实现居中对齐 */
         }
 
@@ -165,14 +165,18 @@
 </section>
 
 <section class="hero is-light is-small">
-    <!-- <div class="hero-body"> -->
-        <!-- <div class="image-container"> -->
-            <!-- <figure> -->
-            <img src="assets/images/intro_1.png" style="display: block; margin-left: auto; margin-right: auto"/>
-            <figcaption>(a) Different plans for different environment, even if the same instruction. (b) The detection results of the yellow block with the complex spatial reference using different methods</figcaption>
-            <!-- </figure> -->
-        <!-- </div> -->
-    <!-- </div> -->
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <img src="assets/images/intro_1.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <br>
+                    <span style="font-size: 110%">(a) Different plans for different environment, even if the same instruction. (b) The detection results of the yellow block with the complex spatial reference using different methods</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
