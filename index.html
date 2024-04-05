@@ -116,7 +116,7 @@
                 </a>
               </span>
                             <!-- Code Link. -->
-                            <!-- <span class="link-block">
+                            <span class="link-block">
                 <a target="_blank" href="https://github.com/vimalabs/VIMA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -124,7 +124,7 @@
                   </span>
                   <span>Code</span>
                 </a>
-                <a target="_blank" href="https://github.com/vimalabs/VIMA#pretrained-models"
+                <!-- <a target="_blank" href="https://github.com/vimalabs/VIMA#pretrained-models"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fa fa-network-wired"></i>
@@ -155,25 +155,29 @@
     </div>
 </section>
 
-<!-- <section class="hero is-light is-small">
+<section class="hero is-light is-small">
     <div class="hero-body">
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item item-sweep_without_exceeding">
-                    <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="100%"
+                    <img src="assets/images/intro_1.pdf" class="interpolation-image"
+                    alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <!-- <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="100%"
                            playbackRate=2.0>
                         <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
                                 type="video/mp4">
-                    </video>
+                    </video> -->
                 </div>
                 <div class="item item-sweep_without_touching">
-                    <video poster="" id="sweep_without_touching" autoplay controls muted loop height="100%"
+                    <img src="assets/images/intro_2.pdf" class="interpolation-image"
+                    alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <!-- <video poster="" id="sweep_without_touching" autoplay controls muted loop height="100%"
                            playbackRate=2.0>
                         <source src="assets/videos/demos/visual_goal_reaching/rearrange_then_restore/1.mp4"
                                 type="video/mp4">
-                    </video>
+                    </video> -->
                 </div>
-                <div class="item item-rotate">
+                <!-- <div class="item item-rotate">
                     <video poster="" id="rotate" autoplay controls muted loop height="100%">
                         <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
                                 type="video/mp4">
@@ -262,11 +266,11 @@
                         <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
                                 type="video/mp4">
                     </video>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
 
 <section class="section">
@@ -282,7 +286,7 @@
                         large models to generate policies with human-selected prompts for embodied agents. However, 
                         these methods exhibit limited generalization capabilities on unseen tasks or scenarios, and 
                         overlook the multimodal environment information which is critical for robots to make decisions.
-                        In this paper, we introduce a novel <b>Robo</b>tic <b>M</b>ultimodal <b>P</b>erception-<b>>P</b> 
+                        In this paper, we introduce a novel <b>Robo</b>tic <b>M</b>ultimodal <b>P</b>erception-<b>P</b>lanning
                         (<b>RoboMP<sup>2</sup></b>) framework for robotic manipulation which consists of a Goal-Conditioned 
                         Multimodal Preceptor (GCMP) and a Retrieval-Augmented Multimodal Planner (RAMP). Specially, GCMP 
                         captures environment states by employing a tailored MLLMs for embodied agents with the abilities of 
@@ -302,10 +306,11 @@
         <div class="rows">
             <div class="rows is-centered ">
                 <div class="row is-full-width">
-                    <img src="assets/images/pull.png" class="interpolation-image"
+                    <img src="assets/images/RoboMP_framework.pdf" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
                     <br>
-                    <span style="font-size: 110%"><b>Multimodal prompts for task specification.</b> We observe that many robot manipulation tasks can be expressed as <i>multimodal prompts</i> that interleave language and image/video frames. We propose VIMA, an embodied agent capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right).</span>
+                    <span style="font-size: 110%"><b>Overview of our proposed RoboMP<sup>2</sup>.</b> he three parts in grey/blue/green represent the input data, planning and
+                        perception, respectively. The modules highlighted are trainable, including fusion module and LoRA.</span>
                 </div>
             </div>
         </div>
@@ -313,7 +318,7 @@
 </section>
 
 <!--Model-->
-<section class="section">
+<!-- <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
             <div class="rows is-centered ">
@@ -331,7 +336,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="section">
     <div class="container is-max-widescreen">
