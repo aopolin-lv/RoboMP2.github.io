@@ -10,6 +10,15 @@
         .times-font {
             font-family: "Times New Roman", Times, serif;
         }
+        .image-container {
+            display: flex;
+            justify-content: space-between; /* 将图片间距平均分配 */
+            margin: 20px; /* 设置图片容器的边距 */
+        }
+        
+        .image-container img {
+            width: 48%; /* 图片宽度占父容器的百分比，留下一些间距 */
+        }
     </style>
     <script>
         var task_map = {
@@ -157,26 +166,24 @@
 
 <section class="hero is-light is-small">
     <div class="hero-body">
-        <div class="container">
-            <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-sweep_without_exceeding">
-                    <img src="assets/images/intro_1.png" class="interpolation-image"
-                    alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <!-- <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="100%"
-                           playbackRate=2.0>
-                        <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
-                                type="video/mp4">
-                    </video> -->
-                </div>
-                <div class="item item-sweep_without_touching">
-                    <img src="assets/images/intro_2.png" class="interpolation-image"
-                    alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <!-- <video poster="" id="sweep_without_touching" autoplay controls muted loop height="100%"
-                           playbackRate=2.0>
-                        <source src="assets/videos/demos/visual_goal_reaching/rearrange_then_restore/1.mp4"
-                                type="video/mp4">
-                    </video> -->
-                </div>
+        <div class="image-container">
+            <img src="assets/images/intro_1.png">
+            <figcaption>The detection results of the yellow block with the complex spatial reference using different methods</figcaption>
+            <img src="assets/images/intro_2.png">
+            <figcaption>Different plans for different environment, even if the same instruction.</figcaption>
+        </div>
+        <!-- <div class="container"> -->
+            <!-- <div class="item item-sweep_without_exceeding">
+                <img src="assets/images/intro_1.png" class="interpolation-image"
+                alt="" style="display: block; margin-left: auto; margin-right: auto"/> -->
+            <!-- </div> -->
+            <!-- <div class="item item-sweep_without_touching">
+                <img src="assets/images/intro_2.png" class="interpolation-image"
+                alt="" style="display: block; margin-left: auto; margin-right: auto"/> -->
+            <!-- </div> -->
+            <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+
+
                 <!-- <div class="item item-rotate">
                     <video poster="" id="rotate" autoplay controls muted loop height="100%">
                         <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
@@ -267,8 +274,8 @@
                                 type="video/mp4">
                     </video>
                 </div> -->
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
     </div>
 </section>
 
