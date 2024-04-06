@@ -21,17 +21,18 @@
         }
         .video-container {
             display: flex; /* 使用 Flexbox 布局 */
-            flex-direction: space-between; /* 纵向排列视频和文字 */
-            align-items: center; /*在横轴上居中对齐*/
-            margin-bottom: 20px; /* 设置视频容器之间的下边距 */
+            justify-content: space-between; /* 将视频之间的空间平均分配 */
         }
+
         .video-item {
             text-align: center; /* 视频和标题居中对齐 */
             width: 25%; /* 设置每个视频容器的宽度为四分之一 */
         }
+
         .video-item video {
-            width: 100%; /* 视频宽度 */
+            width: 100%; /* 视频宽度设置为100%，以填充其父容器的宽度 */
         }
+
         .video-caption {
             margin-top: 10px; /* 设置标题与视频之间的上边距 */
         }
