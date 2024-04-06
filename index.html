@@ -19,24 +19,14 @@
             width: 100%; /* 让图片宽度占据整个容器的宽度 */
             display: block; /* 使图片成为一个块级元素，避免与其他元素同行 */
         }
-        .video-container-2 {
+        .video-container {
             display: flex; /* 使用 Flexbox 布局 */
             flex-direction: column; /* 纵向排列视频和文字 */
             align-items: center; /* 在横轴上居中对齐 */
             margin-bottom: 20px; /* 设置视频容器之间的下边距 */
         }
         
-        .video-container-2 video {
-            width: calc(50% - 10px); /* 每个视频占据容器宽度的二分之一，并留有一定的间距 */
-        }
-        .video-container-4 {
-            display: flex; /* 使用 Flexbox 布局 */
-            flex-direction: column; /* 纵向排列视频和文字 */
-            align-items: center; /* 在横轴上居中对齐 */
-            margin-bottom: 20px; /* 设置视频容器之间的下边距 */
-        }
-        
-        .video-container-4 video {
+        .video-container video {
             width: calc(25% - 10px); /* 每个视频占据容器宽度的二分之一，并留有一定的间距 */
         }
     </style>
@@ -256,7 +246,7 @@
                     <h2 class="title is-3"><span
                             class="dvima">Demo</span></h2>
                     <br>
-                    <div class="video-container-2">
+                    <div class="video-container">
                         <!-- <div>First put the brick block into the red swirl pan then put the object that was previously at its east into the same object</div> -->
                         <video control muted autoplay loop>
                             <source src="assets/videos/demos/simulation/manipulate_old_neighbor.mp4" type="video/mp4">
@@ -265,16 +255,16 @@
                         <!-- <div>Put all objects with the same profile as the blue and purple polka dot frame into it.</div> -->
                             <source src="assets/videos/demos/simulation/same_shape.mp4" type="video/mp4">
                         </video>
-                        <!-- <video control muted autoplay loop> -->
+                        <video control muted autoplay loop>
                         <!-- <div>Put the yellow and green stripe round into the pink pallet then the yellow paisley pallet. Finally restore it into its original container.</div> -->
-                            <!-- <source src="assets/videos/demos/simulation/pick_in_order_then_restore.mp4" type="video/mp4">
+                            <source src="assets/videos/demos/simulation/pick_in_order_then_restore.mp4" type="video/mp4">
                         </video>
-                        <video controls muted autoplay loop> -->
+                        <video controls muted autoplay loop>
                         <!-- <div>Sweeping any yellow and blue stripe blocks into the green and blue stripe three-sided rectangle without exceeding the polka dot line.</div> -->
-                            <!-- <source src="assets/videos/demos/simulation/sweep_without_exceeding.mp4" type="video/mp4">
-                        </video> -->
+                            <source src="assets/videos/demos/simulation/sweep_without_exceeding.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <div class="video-container-4">
+                    <div class="video-container">
                         <video control muted autoplay loop>
                             <!-- <div>Put the yellow block into the green plate then pink bowl.</div> -->
                             <source src="assets/videos/demos/real-world/Pick_in_order.mp4" type="video/mp4">
