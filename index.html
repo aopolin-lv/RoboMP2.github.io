@@ -21,7 +21,8 @@
         }
         .video-container-2 {
             display: flex; /* 使用 Flexbox 布局 */
-            justify-content: space-between; /* 将视频之间的空间平均分配 */
+            flex-direction: column; /* 纵向排列视频和文字 */
+            align-items: center; /* 在横轴上居中对齐 */
             margin-bottom: 20px; /* 设置视频容器之间的下边距 */
         }
         
@@ -30,7 +31,8 @@
         }
         .video-container-4 {
             display: flex; /* 使用 Flexbox 布局 */
-            justify-content: space-between; /* 将视频之间的空间平均分配 */
+            flex-direction: column; /* 纵向排列视频和文字 */
+            align-items: center; /* 在横轴上居中对齐 */
             margin-bottom: 20px; /* 设置视频容器之间的下边距 */
         }
         
@@ -254,26 +256,40 @@
                     <h2 class="title is-3"><span
                             class="dvima">Demo</span></h2>
                     <br>
-                    <div class="video-container-2">
+                    <div class="video-container-4">
+                        <div>First put the brick block into the red swirl pan then put the object that was previously at its east into the same object</div>
                         <video control muted autoplay loop>
-                            <source src="assets/videos/demos/manipulate_old_neighbor.mp4" type="video/mp4">
+                            <source src="assets/videos/demos/simulation/manipulate_old_neighbor.mp4" type="video/mp4">
                         </video>
                         <video controls muted autoplay loop>
-                            <source src="assets/videos/demos/same_texture.mp4" type="video/mp4">
+                        <div>Put all objects with the same profile as the blue and purple polka dot frame into it.</div>
+                            <source src="assets/videos/demos/simulation/same_shape.mp4" type="video/mp4">
+                        </video>
+                        <video control muted autoplay loop>
+                        <div>Put the yellow and green stripe round into the pink pallet then the yellow paisley pallet. Finally restore it into its original container.</div>
+                            <source src="assets/videos/demos/simulation/pick_in_order_then_restore.mp4" type="video/mp4">
+                        </video>
+                        <video controls muted autoplay loop>
+                        <div>Sweeping any yellow and blue stripe blocks into the green and blue stripe three-sided rectangle without exceeding the polka dot line.</div>
+                            <source src="assets/videos/demos/simulation/sweep_without_exceeding.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-container-4">
                         <video control muted autoplay loop>
-                            <source src="assets/videos/demos/manipulate_old_neighbor.mp4" type="video/mp4">
+                            <div>Put the yellow block into the green plate then pink bowl.</div>
+                            <source src="assets/videos/demos/real-world/Pick_in_order.mp4" type="video/mp4">
                         </video>
                         <video controls muted autoplay loop>
-                            <source src="assets/videos/demos/same_texture.mp4" type="video/mp4">
+                            <div>Put any vegetables into the pink bowl and any fruits into the green plate.</div>
+                            <source src="assets/videos/demos/real-world/Rearrange.mp4" type="video/mp4">
                         </video>
                         <video control muted autoplay loop>
-                            <source src="assets/videos/demos/manipulate_old_neighbor.mp4" type="video/mp4">
+                            <div>Pass me the object which can repair the TV.</div>
+                            <source src="assets/videos/demos/real-world/Tool.mp4" type="video/mp4">
                         </video>
                         <video controls muted autoplay loop>
-                            <source src="assets/videos/demos/same_texture.mp4" type="video/mp4">
+                            <div>Put any yellow blocks into the green plate.</div>
+                            <source src="assets/videos/demos/real-world/Distraction.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -290,6 +306,7 @@
                 <div class="row is-full-width">
                     <h2 class="title is-3"><span
                         class="dvima">Qualitative Results</span></h2>
+                    <br>
                     <img src="assets/images/Visualization.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
                     <br>
