@@ -97,7 +97,8 @@ body {
 }
 
 .conference-authors a {
-    color: hwb(359 0% 25% / 0.757) !important;
+    color: hwb(359 0% 25% / 0.683) !important;
+    font-family: "Times New Roman", Times, sans-serif;
 }
 
 .publication-authors a:hover {
