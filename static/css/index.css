@@ -97,7 +97,7 @@ body {
 }
 
 .conference-authors a {
-    color: hsl(332, 100%, 44%) !important;
+    color: hwb(332 5% 18% / 0.628) !important;
 }
 
 .publication-authors a:hover {
@@ -110,7 +110,7 @@ body {
 
 .author-info-block {
     display: inline-block;
-    font-size: 11px;
+    font-size: 16px;
 }
 
 .publication-banner img {
