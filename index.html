@@ -42,35 +42,6 @@
         }
 
     </style>
-    <script>
-        var task_map = {
-            "simple-object-manipulation": "simple_object_manipulation",
-            "visual-goal-reaching": "visual_goal_reaching",
-            "novel-concept-grounding": "novel_concept_grounding",
-            "one-shot-video-imitation": "one_shot_video_imitation",
-            "visual-constraint-satisfaction": "visual_constraint_satisfaction",
-            "visual-reasoning": "visual_reasoning"
-        };
-
-        function updateDemoVideo(category) {
-            // var demo = document.getElementById("single-menu-demos").value;
-            var task = document.getElementById(category + "-menu-tasks").value;
-            var inst = document.getElementById(category + "-menu-instances").value;
-
-            console.log(task_map[category], task, inst)
-
-            var video = document.getElementById(category + "-single-task-video");
-            video.src = "assets/videos/demos/" +
-                task_map[category] +
-                "/" +
-                task +
-                "/" +
-                inst +
-                ".mp4";
-            video.playbackRate = 2.0;
-            video.play();
-        }
-    </script>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
@@ -99,17 +70,16 @@
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <h1 class="title is-1 publication-title">RoboMP<sup>2</sup>: A Robotic Multimodal Perception-Planning Framework with Multimodal Large Language Models</h1>
-                    <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/" style="color: purple;">ICML 2024</a></h3>
+                    <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/">ICML 2024</a></h3>
                     <div class="is-size-5 publication-authors">
-            <span class="author-block">
-                <a target="_blank" href="https://aopolin-lv.github.io/">Qi&#160;Lv</a><sup>12</sup>,
-                <a target="_blank" href="https://openreview.net/profile?id=~Hao_Li59">Hao&#160;Li</a><sup>1</sup>,
-                <a target="_blank"
-                   href="https://xiang-deng-dl.github.io/">Xiang&#160;Deng</a><sup>1&dagger</sup>,
-                <a target="_blank" href="https://rshaojimmy.github.io/">Rui&#160;Shao</a><sup>1</sup>,
-                <a target="_blank" href="https://scholar.google.com/citations?user=Oo7c22wAAAAJ&hl=zh-CN">Michael&#160;Yu&#160;Wang</a><sup>2</sup>,
-                <a target="_blank" href="https://liqiangnie.github.io/">Liqiang&#160;Nie&dagger</a><sup>1</sup>
-            </span>
+                        <span class="author-block">
+                            <a target="_blank" href="https://aopolin-lv.github.io/">Qi&#160;Lv</a><sup>12</sup>,
+                            <a target="_blank" href="https://openreview.net/profile?id=~Hao_Li59">Hao&#160;Li</a><sup>1</sup>,
+                            <a target="_blank" href="https://xiang-deng-dl.github.io/">Xiang&#160;Deng</a><sup>1&dagger;</sup>,
+                            <a target="_blank" href="https://rshaojimmy.github.io/">Rui&#160;Shao</a><sup>1</sup>,
+                            <a target="_blank" href="https://scholar.google.com/citations?user=Oo7c22wAAAAJ&hl=zh-CN">Michael&#160;Yu&#160;Wang</a><sup>2</sup>,
+                            <a target="_blank" href="https://liqiangnie.github.io/">Liqiang&#160;Nie</a><sup>1&dagger;</sup>
+                        </span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
@@ -399,7 +369,7 @@
     author    = {Qi Lv and Hao Li and Xiang Deng and Rui Shao and Michael Yu Wang and Liqiang Nie},
     booktitle = {Fortieth International Conference on Machine Learning},
     year      = {2024}
-    }</code></pre>
+}</code></pre>
     </div>
 </section>
 
