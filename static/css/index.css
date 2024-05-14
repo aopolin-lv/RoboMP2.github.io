@@ -99,7 +99,6 @@ body {
 .conference-authors a {
     /* color: hwb(0 33% 53% / 0.683) !important; */
     color: #c60184 !important;
-    /* font-family: "Typewriter", "Times New Roman", Times, sans-serif; */
 }
 
 .publication-authors a:hover {
@@ -108,12 +107,12 @@ body {
 
 .author-block {
     display: inline-block;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .author-info-block {
     display: inline-block;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .publication-banner img {
