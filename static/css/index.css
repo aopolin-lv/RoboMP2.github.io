@@ -106,11 +106,12 @@ body {
 
 .author-block {
     display: inline-block;
+    font-size: 18px;
 }
 
 .author-info-block {
     display: inline-block;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .publication-banner img {
