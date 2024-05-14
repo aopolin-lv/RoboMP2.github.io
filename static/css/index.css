@@ -108,6 +108,11 @@ body {
     display: inline-block;
 }
 
+.author-info-block {
+    display: inline-block;
+    font-size: 11px;
+}
+
 .publication-banner img {
 }
 
