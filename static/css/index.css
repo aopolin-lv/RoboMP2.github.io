@@ -84,7 +84,7 @@ body {
 }
 
 .publication-awards {
-    color: #cf0202c7;
+    color: #cf0202fe;
     width: fit-content;
     font-weight: bolder;
 }
@@ -98,7 +98,7 @@ body {
 
 .conference-authors a {
     /* color: hwb(0 33% 53% / 0.683) !important; */
-    color: #6f000f !important;
+    color: #ad0118 !important;
 }
 
 .publication-authors a:hover {
